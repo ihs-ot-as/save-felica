@@ -19,6 +19,7 @@ The database connection is handled by Sequelize, and when one of the transits wa
 日本語での説明は割愛
 
 First, get yourself a mysql for storage. For example by using <code>docker-compose.yml</code> like this!
+Metabase is only there just in case you fancy seeing what you've got via a BI tool.
      
       version: '3.1'
 
@@ -67,12 +68,15 @@ Second,
 
 ## どうやって動くの how does it work
 再度になるが、このコードは以下のQiitaの投稿なしではできなかった。ありがとうございました🌹
+
 (https://qiita.com/gebo/items/cb2dd393170767852fb3)[https://qiita.com/gebo/items/cb2dd393170767852fb3]
 書かれている通りに読み替えているだけだが、読み替えるデータを逐次ファイルから読み出すと遅くなるので、
 起動時にすべてメモリに読み込むように工夫している。結果、もしCSVなど変更があったら再起動しないと変更が適用されないことになるが、
 それよりもパフォーマンスのほうが重要という判断である。
 
+
 Once again, this code wouldn't have been possible without the following post on Qiita. Many thanks go to the creator of this post🌹
+
 (https://qiita.com/gebo/items/cb2dd393170767852fb3)[https://qiita.com/gebo/items/cb2dd393170767852fb3]
 This program merely translates the incoming data before saving it to the database, and one detail that I paid attention to is that this program loads all the mappings and stuff into memory upon initialization. This is because reading files on the disk every time is extremely expensive. This means any change to these files requires a restart before they take effect, but in our case performance should be more important.
 
