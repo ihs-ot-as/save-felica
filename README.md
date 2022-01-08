@@ -11,8 +11,8 @@ The database connection is handled by Sequelize, and when one of the transits wa
 <ul>
 <li> bulk insert になっているので、それを訂正する </li>
 <li>it uses a bulk insert, so need to make it atomic.</li>
-<li> node_modules が含まれているので諸々訂正する </li>
-<li> node_modules, which aren't necessary because they are dependencies that can be resolved by doing <code>npm install</code>, so learn how to properly do <code>.gitignore</code></li>
+<li> <code>node_modules</code> が含まれているので諸々訂正する </li>
+     <li> <code>node_modules</code>, which aren't necessary because they are dependencies that can be resolved by doing <code>npm install</code>, so learn how to properly do <code>.gitignore</code></li>
 </ul>
 
 ## 使い方 How to use
