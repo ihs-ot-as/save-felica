@@ -67,7 +67,7 @@ Second,
      
 
 ## どうやって動くの how does it work
-再度になるが、このコードは以下のQiitaの投稿なしではできなかった。深謝🌹
+再度になるが、このコードは以下のQiitaの投稿なしではできなかった。深謝。
 
 [https://qiita.com/gebo/items/cb2dd393170767852fb3](https://qiita.com/gebo/items/cb2dd393170767852fb3)
 
