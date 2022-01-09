@@ -82,5 +82,13 @@ Once again, this code wouldn't have been possible without the following post on 
 
 This program merely translates the incoming data before saving it to the database, and one detail that I paid attention to is that this program loads all the mappings and stuff into memory upon initialization. This is because reading files on the disk every time is extremely expensive. This means any change to these files requires a restart before they take effect, but in our case performance should be more important.
 
+## その他改善点 how could I improve this code?
+いわゆる enum 的なところは object つまり hashtable でもっているのだが、CSVに関してはただそのまま持っているだけである。
+一辺倒な検索の仕方しかしないので、これも key-value がたにしたほうが検索が早くなるのは言う間でもないが、データの加工を伴うためそこまで至っていない
+
+For data that could also be called enums, I store it as pure objects, which in JavaScript are treated as hashtables. However as for the data on stations, it's just an array.
+(in JavaScript it's not actually a linked list as seen in languages like C#; rather it's an hashtable where the key is the index... but the problem remains the same, the O(n) isn't very good. )
+Since the program only queries for a match always in the same way, I could modify the CSV and make it a pure JS object as well, but I haven't seen such a significant performance issue up until this point.
+
 
 
