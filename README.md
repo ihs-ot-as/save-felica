@@ -94,7 +94,7 @@ For data that could also be called enums, I store it as pure objects, which in J
 (in JavaScript it's not actually a linked list as seen in languages like C#; rather it's an hashtable where the key is the index... but the problem remains the same, the O(n) isn't very good. )
 
 Since the program only queries for a match always in the same way, I could modify the CSV and make it a pure JS object as well, but I haven't seen such a significant performance issue up until this point.
-In other words, having this as an array sort of defeats the whole purpose of keeping the enum data as objects😅 But hay, it's just a demo.
+In other words, having this as an array sort of defeats the whole purpose of keeping the enum data as objects😅 But hey, it's just a demo.
 
 
 
