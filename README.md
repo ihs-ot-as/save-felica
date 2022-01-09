@@ -93,7 +93,7 @@ This program merely translates the incoming data before saving it to the databas
 For data that could also be called enums, I store it as pure objects, which in JavaScript are treated as hashtables. However as for the data on stations, it's just an array.
 (in JavaScript it's not actually a linked list as seen in languages like C#; rather it's an hashtable where the key is the index... but the problem remains the same, the O(n) isn't very good. )
 
-Since the program only queries for a match always in the same way, I could modify the CSV and make it a pure JS object as well, but I haven't seen such a significant performance issue up until this point.
+Since the program only queries for a match always in the same way, I could modify the CSV and make it a pure JS object as well, but I haven't got around to do that
 
 
 
